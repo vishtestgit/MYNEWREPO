@@ -68,7 +68,7 @@ public class HomeTest extends BaseTest{
 		System.out.println(x);
 		Assert.assertEquals(x, "Billing Types","BillingType PageName mismatch");
 	}
-	//xxx Validation test cases:
+
 	
 	
 	@AfterMethod

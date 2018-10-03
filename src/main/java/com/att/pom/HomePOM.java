@@ -58,6 +58,7 @@ public class HomePOM extends BaseTest{
 		return new TasksPOM();
 	}
 	
+	//Methods to select Menu Pages
 	public String selectLeaveTypeMenu() {
 		testUtil.clickOnSubMenu(driver,settingsMain,settingsSubLeaveType);
 		String x = leaveTypePOM.validateLeaveTypePageName();

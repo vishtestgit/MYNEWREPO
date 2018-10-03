@@ -34,6 +34,7 @@ public class HomeTest extends BaseTest{
 		homePOM = loginPOM.validateAttLogin(propv.getProperty("username"),propv.getProperty("password"));
 	}
 	
+	//Basic Home page test methods of HomeTest
 	@Test
 	public void verifyProfileName() {
 		String x = homePOM.validateProfileName();

@@ -15,6 +15,12 @@ public class TasksPOM extends BaseTest{
 	@FindBy(xpath="//span[contains(text(),'Create Tasks')]")
 	WebElement AttcreateTasksBtn;
 	
+	@FindBy(xpath="//input[@value='Delete Selected Tasks']")
+	WebElement AttDeleteSelectedTasksBtn;
+	
+	@FindBy(xpath="//input[@id='deleteButton']")
+	WebElement AttDeleteConfirmationBtn;
+	
 	//Initialization
 	public TasksPOM() {
 		PageFactory.initElements(driver, this);
@@ -30,5 +36,11 @@ public class TasksPOM extends BaseTest{
 		return new CreateNewTaskPOM();
 	}
 	
+	public void validateDeleteSelectedTask(String taskName) {
+		String xpath= "//a[text()='"+taskName+"']/../../../../../..//input[@type='checkbox']";
+		driver.findElement(By.xpath(xpath)).click();
+		AttDeleteSelectedTasksBtn.click();
+		AttDeleteConfirmationBtn.click();
+	}
 
 }

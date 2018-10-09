@@ -36,13 +36,15 @@ public class BillingTypeTest extends BaseTest {
 			testUtil = new TestUtil();
 			billingTypePOM = new BillingTypePOM();
 			homePOM = loginPOM.validateAttLogin(propv.getProperty("username"),propv.getProperty("password"));
+			homePOM.validateSelectSettingsMenuByValue("Billing Types");
 		}
 		
 
 		@Test
-		public String verifyBillingTypePageName() {
+		public void verifyBillingTypePageName() {
 			String x = billingTypePOM.validateBillingTypePageName();
-			return x;
+			Assert.assertEquals(x, "Billing Types", "Page name Mismatch");
+						
 		}
 
 		

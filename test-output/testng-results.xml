@@ -1,85 +1,387 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="30" passed="30" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-10-02T11:58:40Z" name="Default suite" finished-at="2018-10-02T11:59:31Z" duration-ms="50926">
+  <suite started-at="2018-10-09T15:35:29Z" name="RockON Automation: ActiTime 2.0" finished-at="2018-10-09T15:42:24Z" duration-ms="415220">
     <groups>
     </groups>
-    <test started-at="2018-10-02T11:58:40Z" name="Default test" finished-at="2018-10-02T11:59:31Z" duration-ms="50926">
+    <test started-at="2018-10-09T15:35:29Z" name="ActiTime" finished-at="2018-10-09T15:42:24Z" duration-ms="415220">
+      <class name="com.att.testcases.ReportsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.ReportsTest@140c9f39]" started-at="2018-10-09T15:41:44Z" name="setUp" finished-at="2018-10-09T15:41:52Z" duration-ms="7346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyReportsTabLinkClick()[pri:0, instance:com.att.testcases.ReportsTest@140c9f39]" started-at="2018-10-09T15:41:52Z" name="verifyReportsTabLinkClick" finished-at="2018-10-09T15:41:53Z" duration-ms="1209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyReportsTabLinkClick -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.ReportsTest@140c9f39]" started-at="2018-10-09T15:41:53Z" name="tearDown" finished-at="2018-10-09T15:41:56Z" duration-ms="3464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.att.testcases.ReportsTest -->
+      <class name="com.att.testcases.TasksTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.TasksTest@4d910fd6]" started-at="2018-10-09T15:41:56Z" name="setUp" finished-at="2018-10-09T15:42:06Z" duration-ms="10126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCreateNewTaskBtnClick()[pri:0, instance:com.att.testcases.TasksTest@4d910fd6]" started-at="2018-10-09T15:42:06Z" name="verifyCreateNewTaskBtnClick" finished-at="2018-10-09T15:42:08Z" duration-ms="1522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateNewTaskBtnClick -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.TasksTest@4d910fd6]" started-at="2018-10-09T15:42:08Z" name="tearDown" finished-at="2018-10-09T15:42:11Z" duration-ms="3192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.TasksTest@4d910fd6]" started-at="2018-10-09T15:42:11Z" name="setUp" finished-at="2018-10-09T15:42:21Z" duration-ms="9357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyTaskPage()[pri:0, instance:com.att.testcases.TasksTest@4d910fd6]" started-at="2018-10-09T15:42:21Z" name="verifyTaskPage" finished-at="2018-10-09T15:42:21Z" duration-ms="60" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTaskPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.TasksTest@4d910fd6]" started-at="2018-10-09T15:42:21Z" name="tearDown" finished-at="2018-10-09T15:42:24Z" duration-ms="3279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.att.testcases.TasksTest -->
       <class name="com.att.testcases.HomeTest">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:58:40Z" name="setUP" finished-at="2018-10-02T11:58:46Z" duration-ms="5227" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:16Z" name="setUP" finished-at="2018-10-09T15:36:24Z" duration-ms="7460" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="verifyBillingTypeTest()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:58:46Z" name="verifyBillingTypeTest" finished-at="2018-10-02T11:58:48Z" duration-ms="2815" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyBillingTypeTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:58:48Z" name="tearDown" finished-at="2018-10-02T11:58:49Z" duration-ms="725" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:58:49Z" name="setUP" finished-at="2018-10-02T11:58:55Z" duration-ms="5352" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="verifyLeaveTypeTest()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:58:55Z" name="verifyLeaveTypeTest" finished-at="2018-10-02T11:58:57Z" duration-ms="2629" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLeaveTypeTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:58:57Z" name="tearDown" finished-at="2018-10-02T11:58:58Z" duration-ms="673" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:58:58Z" name="setUP" finished-at="2018-10-02T11:59:03Z" duration-ms="5604" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="verifyProfileName()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:03Z" name="verifyProfileName" finished-at="2018-10-02T11:59:05Z" duration-ms="1655" status="PASS">
+        <test-method signature="verifyProfileName()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:24Z" name="verifyProfileName" finished-at="2018-10-09T15:36:24Z" duration-ms="73" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProfileName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:05Z" name="tearDown" finished-at="2018-10-02T11:59:06Z" duration-ms="654" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:24Z" name="tearDown" finished-at="2018-10-09T15:36:28Z" duration-ms="4090" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:06Z" name="setUP" finished-at="2018-10-02T11:59:14Z" duration-ms="8015" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:28Z" name="setUP" finished-at="2018-10-09T15:36:35Z" duration-ms="6943" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="verifyReportTab()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:14Z" name="verifyReportTab" finished-at="2018-10-02T11:59:14Z" duration-ms="3" status="PASS">
+        <test-method signature="verifyReportTab()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:35Z" name="verifyReportTab" finished-at="2018-10-09T15:36:35Z" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyReportTab -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:14Z" name="tearDown" finished-at="2018-10-02T11:59:15Z" duration-ms="924" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:35Z" name="tearDown" finished-at="2018-10-09T15:36:38Z" duration-ms="3369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:15Z" name="setUP" finished-at="2018-10-02T11:59:20Z" duration-ms="5331" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:38Z" name="setUP" finished-at="2018-10-09T15:36:46Z" duration-ms="7596" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="verifyTaskTabClick()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:20Z" name="verifyTaskTabClick" finished-at="2018-10-02T11:59:24Z" duration-ms="3850" status="PASS">
+        <test-method signature="verifySelectSettingsBillingTypesMenu()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:46Z" name="verifySelectSettingsBillingTypesMenu" finished-at="2018-10-09T15:36:46Z" duration-ms="678" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySelectSettingsBillingTypesMenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:46Z" name="tearDown" finished-at="2018-10-09T15:36:49Z" duration-ms="2698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:49Z" name="setUP" finished-at="2018-10-09T15:36:57Z" duration-ms="7606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="verifySelectSettingsLeaveTypesMenu()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:57Z" name="verifySelectSettingsLeaveTypesMenu" finished-at="2018-10-09T15:36:57Z" duration-ms="917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySelectSettingsLeaveTypesMenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:36:57Z" name="tearDown" finished-at="2018-10-09T15:37:01Z" duration-ms="3408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:01Z" name="setUP" finished-at="2018-10-09T15:37:09Z" duration-ms="7664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="verifySelectSettingsLicensesMenu()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:09Z" name="verifySelectSettingsLicensesMenu" finished-at="2018-10-09T15:37:09Z" duration-ms="655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySelectSettingsLicensesMenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:09Z" name="tearDown" finished-at="2018-10-09T15:37:12Z" duration-ms="2890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:12Z" name="setUP" finished-at="2018-10-09T15:37:19Z" duration-ms="7240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="verifySelectSettingsLogoAndColorSchemeMenu()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:19Z" name="verifySelectSettingsLogoAndColorSchemeMenu" finished-at="2018-10-09T15:37:20Z" duration-ms="580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySelectSettingsLogoAndColorSchemeMenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:20Z" name="tearDown" finished-at="2018-10-09T15:37:23Z" duration-ms="3059" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:23Z" name="setUP" finished-at="2018-10-09T15:37:31Z" duration-ms="7898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="verifyTaskTabClick()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:31Z" name="verifyTaskTabClick" finished-at="2018-10-09T15:37:32Z" duration-ms="899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTaskTabClick -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:24Z" name="tearDown" finished-at="2018-10-02T11:59:25Z" duration-ms="667" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:32Z" name="tearDown" finished-at="2018-10-09T15:37:34Z" duration-ms="2494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:25Z" name="setUP" finished-at="2018-10-02T11:59:31Z" duration-ms="6116" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:34Z" name="setUP" finished-at="2018-10-09T15:37:42Z" duration-ms="7661" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="verifyTasksTab()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:31Z" name="verifyTasksTab" finished-at="2018-10-02T11:59:31Z" duration-ms="1" status="PASS">
+        <test-method signature="verifyTasksTab()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:42Z" name="verifyTasksTab" finished-at="2018-10-09T15:37:42Z" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTasksTab -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@1356d4d4]" started-at="2018-10-02T11:59:31Z" name="tearDown" finished-at="2018-10-02T11:59:31Z" duration-ms="641" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.HomeTest@770d3326]" started-at="2018-10-09T15:37:42Z" name="tearDown" finished-at="2018-10-09T15:37:45Z" duration-ms="2760" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.att.testcases.HomeTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.att.testcases.LicensesTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.LicensesTest@1f97cf0d]" started-at="2018-10-09T15:41:34Z" name="setUp" finished-at="2018-10-09T15:41:42Z" duration-ms="8011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLicensesPageName()[pri:0, instance:com.att.testcases.LicensesTest@1f97cf0d]" started-at="2018-10-09T15:41:42Z" name="verifyLicensesPageName" finished-at="2018-10-09T15:41:42Z" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLicensesPageName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.LicensesTest@1f97cf0d]" started-at="2018-10-09T15:41:42Z" name="tearDown" finished-at="2018-10-09T15:41:44Z" duration-ms="2513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.att.testcases.LicensesTest -->
+      <class name="com.att.testcases.CreateNewTasksTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:37:55Z" name="setUp" finished-at="2018-10-09T15:38:06Z" duration-ms="11369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateDefaultRadioButtonSelection()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:06Z" name="validateDefaultRadioButtonSelection" finished-at="2018-10-09T15:38:07Z" duration-ms="278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDefaultRadioButtonSelection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:07Z" name="tearDown" finished-at="2018-10-09T15:38:10Z" duration-ms="2947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:10Z" name="setUp" finished-at="2018-10-09T15:38:22Z" duration-ms="11923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCreateNewTasksPageName()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:22Z" name="verifyCreateNewTasksPageName" finished-at="2018-10-09T15:38:22Z" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateNewTasksPageName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:22Z" name="tearDown" finished-at="2018-10-09T15:38:24Z" duration-ms="2812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:24Z" name="setUp" finished-at="2018-10-09T15:38:35Z" duration-ms="11031" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCustomerAndTaskCreateAndDelete()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:35Z" name="verifyCustomerAndTaskCreateAndDelete" finished-at="2018-10-09T15:38:40Z" duration-ms="4601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerAndTaskCreateAndDelete -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:40Z" name="tearDown" finished-at="2018-10-09T15:38:44Z" duration-ms="3490" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:44Z" name="setUp" finished-at="2018-10-09T15:38:55Z" duration-ms="10987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySelectCustomerName()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:55Z" name="verifySelectCustomerName" finished-at="2018-10-09T15:38:55Z" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySelectCustomerName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:55Z" name="tearDown" finished-at="2018-10-09T15:38:58Z" duration-ms="3826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:38:58Z" name="setUp" finished-at="2018-10-09T15:39:09Z" duration-ms="10609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verify_Billable_Task_Using_All_Customer_And_All_Project()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:09Z" name="verify_Billable_Task_Using_All_Customer_And_All_Project" finished-at="2018-10-09T15:39:12Z" duration-ms="2954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Billable_Task_Using_All_Customer_And_All_Project -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:12Z" name="tearDown" finished-at="2018-10-09T15:39:15Z" duration-ms="3077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:15Z" name="setUp" finished-at="2018-10-09T15:39:25Z" duration-ms="9860" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verify_Billable_Task_Using_New_Customer_And_New_Project()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:25Z" name="verify_Billable_Task_Using_New_Customer_And_New_Project" finished-at="2018-10-09T15:39:29Z" duration-ms="4228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Billable_Task_Using_New_Customer_And_New_Project -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:29Z" name="tearDown" finished-at="2018-10-09T15:39:31Z" duration-ms="1954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:31Z" name="setUp" finished-at="2018-10-09T15:39:41Z" duration-ms="9611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verify_Create_Billable_task_using_Existing_Customer()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:41Z" name="verify_Create_Billable_task_using_Existing_Customer" finished-at="2018-10-09T15:39:44Z" duration-ms="3400" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Create_Billable_task_using_Existing_Customer -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:44Z" name="tearDown" finished-at="2018-10-09T15:39:46Z" duration-ms="2276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:46Z" name="setUp" finished-at="2018-10-09T15:39:56Z" duration-ms="9883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verify_Create_Non_billable_task_using_Existing_Customer()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:56Z" name="verify_Create_Non_billable_task_using_Existing_Customer" finished-at="2018-10-09T15:39:59Z" duration-ms="3067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Create_Non_billable_task_using_Existing_Customer -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:39:59Z" name="tearDown" finished-at="2018-10-09T15:40:02Z" duration-ms="2338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:40:02Z" name="setUp" finished-at="2018-10-09T15:40:13Z" duration-ms="10907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verify_Non_Billable_Task_Using_All_Customer_And_All_Project()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:40:13Z" name="verify_Non_Billable_Task_Using_All_Customer_And_All_Project" finished-at="2018-10-09T15:40:16Z" duration-ms="3487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Non_Billable_Task_Using_All_Customer_And_All_Project -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:40:16Z" name="tearDown" finished-at="2018-10-09T15:40:20Z" duration-ms="4087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:40:20Z" name="setUp" finished-at="2018-10-09T15:40:31Z" duration-ms="11176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verify_Non_Billable_Task_Using_New_Customer_And_New_Project()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:40:31Z" name="verify_Non_Billable_Task_Using_New_Customer_And_New_Project" finished-at="2018-10-09T15:40:36Z" duration-ms="4772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Non_Billable_Task_Using_New_Customer_And_New_Project -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:40:36Z" name="tearDown" finished-at="2018-10-09T15:40:41Z" duration-ms="4418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:40:41Z" name="setUp" finished-at="2018-10-09T15:40:54Z" duration-ms="12982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verify_Task_Create_By_Nothing()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:40:54Z" name="verify_Task_Create_By_Nothing" finished-at="2018-10-09T15:40:54Z" duration-ms="752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Task_Create_By_Nothing -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:40:54Z" name="tearDown" finished-at="2018-10-09T15:40:57Z" duration-ms="2954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:40:57Z" name="setUp" finished-at="2018-10-09T15:41:09Z" duration-ms="11580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verify_Two_Records_Creation_Billable_Task_Using_New_Customer_And_New_Project()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:41:09Z" name="verify_Two_Records_Creation_Billable_Task_Using_New_Customer_And_New_Project" finished-at="2018-10-09T15:41:19Z" duration-ms="9953" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Two_Records_Creation_Billable_Task_Using_New_Customer_And_New_Project -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.CreateNewTasksTest@51f116b8]" started-at="2018-10-09T15:41:19Z" name="tearDown" finished-at="2018-10-09T15:41:22Z" duration-ms="3316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.att.testcases.CreateNewTasksTest -->
+      <class name="com.att.testcases.BillingTypeTest">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.BillingTypeTest@4cc8eb05]" started-at="2018-10-09T15:37:45Z" name="setUP" finished-at="2018-10-09T15:37:52Z" duration-ms="7764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="verifyBillingTypePageName()[pri:0, instance:com.att.testcases.BillingTypeTest@4cc8eb05]" started-at="2018-10-09T15:37:52Z" name="verifyBillingTypePageName" finished-at="2018-10-09T15:37:53Z" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBillingTypePageName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.BillingTypeTest@4cc8eb05]" started-at="2018-10-09T15:37:53Z" name="tearDown" finished-at="2018-10-09T15:37:55Z" duration-ms="2575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.att.testcases.BillingTypeTest -->
+      <class name="com.att.testcases.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:35:29Z" name="setUp" finished-at="2018-10-09T15:35:35Z" duration-ms="6382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AttImgeLogoTest()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:35:35Z" name="AttImgeLogoTest" finished-at="2018-10-09T15:35:35Z" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AttImgeLogoTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:35:35Z" name="tearDown" finished-at="2018-10-09T15:35:42Z" duration-ms="6366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:35:42Z" name="setUp" finished-at="2018-10-09T15:35:54Z" duration-ms="12343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AttKeepLoginTest()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:35:54Z" name="AttKeepLoginTest" finished-at="2018-10-09T15:35:54Z" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AttKeepLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:35:54Z" name="tearDown" finished-at="2018-10-09T15:35:56Z" duration-ms="2446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:35:56Z" name="setUp" finished-at="2018-10-09T15:36:02Z" duration-ms="5981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AttLicLinkTest()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:36:02Z" name="AttLicLinkTest" finished-at="2018-10-09T15:36:03Z" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AttLicLinkTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:36:03Z" name="tearDown" finished-at="2018-10-09T15:36:06Z" duration-ms="3262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:36:06Z" name="setUp" finished-at="2018-10-09T15:36:11Z" duration-ms="5669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AttLoginTest()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:36:11Z" name="AttLoginTest" finished-at="2018-10-09T15:36:13Z" duration-ms="1488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AttLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.LoginTest@2abf4075]" started-at="2018-10-09T15:36:13Z" name="tearDown" finished-at="2018-10-09T15:36:16Z" duration-ms="3100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.att.testcases.LoginTest -->
+      <class name="com.att.testcases.LeaveTypeTest">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.att.testcases.LeaveTypeTest@19d481b]" started-at="2018-10-09T15:41:22Z" name="setUP" finished-at="2018-10-09T15:41:30Z" duration-ms="7975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="verifyLeaveTypePageName()[pri:0, instance:com.att.testcases.LeaveTypeTest@19d481b]" started-at="2018-10-09T15:41:30Z" name="verifyLeaveTypePageName" finished-at="2018-10-09T15:41:30Z" duration-ms="62" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLeaveTypePageName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.att.testcases.LeaveTypeTest@19d481b]" started-at="2018-10-09T15:41:30Z" name="tearDown" finished-at="2018-10-09T15:41:34Z" duration-ms="3613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.att.testcases.LeaveTypeTest -->
+    </test> <!-- ActiTime -->
+  </suite> <!-- RockON Automation: ActiTime 2.0 -->
 </testng-results>

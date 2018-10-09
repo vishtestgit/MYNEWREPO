@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RockON Automation: ActiTime 2.0">
+
+
+<test name = "ActiTime">
+	<classes>
+		<class name = "com.att.testcases.LoginTest"> </class>
+		<class name = "com.att.testcases.HomeTest"> </class>
+		<class name = "com.att.testcases.BillingTypeTest"> </class>
+		<class name = "com.att.testcases.CreateNewTasksTest"> </class>
+		<class name = "com.att.testcases.LeaveTypeTest"> </class>
+		<class name = "com.att.testcases.LicensesTest"> </class>
+		<class name = "com.att.testcases.ReportsTest"> </class>
+		<class name = "com.att.testcases.TasksTest"> </class>
+		
+	</classes>
+</test>
+</suite>

@@ -18,7 +18,7 @@ public class HomeTest extends BaseTest{
 	
 	LoginPOM loginPOM;
 	HomePOM homePOM;
-	TestUtil testUtil;
+	//TestUtil testUtil;
 	TasksPOM tasksPOM;
 	ReportsPOM reportsPOM;
 	
@@ -30,8 +30,9 @@ public class HomeTest extends BaseTest{
 	public void setUP() {
 		initialization();
 		loginPOM = new LoginPOM();
-		testUtil = new TestUtil();
+	//	testUtil = new TestUtil();
 		homePOM = loginPOM.validateAttLogin(propv.getProperty("username"),propv.getProperty("password"));
+		
 	}
 	
 	//Basic Home page test methods of HomeTest
@@ -56,21 +57,31 @@ public class HomeTest extends BaseTest{
 		homePOM.validateTaskClick();
 	}
 	
-	//Setting Menu Validation test cases:
-	@Test
-	public void verifyLeaveTypeTest() {
-		String x = homePOM.selectLeaveTypeMenu();
-		System.out.println(x);
-		Assert.assertEquals(x, "Leave Types","LeaveType PageName mismatch");
-	}
-	@Test
-	public void verifyBillingTypeTest() {
-		String x = homePOM.selectBillingTypeMenu();
-		System.out.println(x);
-		Assert.assertEquals(x, "Billing Types","BillingType PageName mismatch");
-	}
+	//Setting Menu options Validation test cases:
 
+	@Test
+	public void verifySelectSettingsLeaveTypesMenu() {
+		String x = homePOM.validateSelectSettingsMenuByValue("Leave Types");
+		Assert.assertEquals(x, "Leave Types","Page Name Mismatch");
+	}
 	
+	@Test
+	public void verifySelectSettingsBillingTypesMenu() {
+		String x = homePOM.validateSelectSettingsMenuByValue("Billing Types");
+		Assert.assertEquals(x, "Billing Types","Page Name Mismatch");
+	}
+	
+	@Test
+	public void verifySelectSettingsLicensesMenu() {
+		String x = homePOM.validateSelectSettingsMenuByValue("Licenses");
+		Assert.assertEquals(x, "Licenses","Page Name Mismatch");
+	}
+	
+	@Test
+	public void verifySelectSettingsLogoAndColorSchemeMenu() {
+		String x = homePOM.validateSelectSettingsMenuByValue("Logo & Color Scheme");
+		Assert.assertEquals(x, "Logo & Color Scheme","Page Name Mismatch");
+	}
 	
 	@AfterMethod
 	public void tearDown() {

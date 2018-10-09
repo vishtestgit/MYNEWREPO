@@ -1,9 +1,12 @@
 package com.att.pom;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.att.base.BaseTest;
 
@@ -48,6 +51,13 @@ public class TaskAndCustomerPOM extends BaseTest{
 		AttClickShowBtn.click();
 	}
 	
+	public void validateSelectCustomerByPrameterAndShow(String cName) {
+		String xpath = "//select[@name='selectedCustomer']/option[contains(text(),'"+cName+"')]";
+		AttTaskAndCustomerBtn.click();
+		driver.findElement(By.xpath(xpath)).click();
+		AttClickShowBtn.click();
+	}
+	
 	public String validateSelectedAndDeleteCustomer() {
 		validateSelectCustomerAndShow();
 		AttSelectAllLink.click();
@@ -56,4 +66,26 @@ public class TaskAndCustomerPOM extends BaseTest{
 		String x = AttDeleteSuccessMsg.getText();
 		return x;
 	}
+	
+	public void validateDeleteCustomer(String cName) {
+		validateSelectCustomerByPrameterAndShow(cName);
+		AttSelectAllLink.click();
+		AttDeleteSelectedBtn1.click();
+		AttDeleteSelectedBtn2.click();
+
+//		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='All']"))).click();
+	//	new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Delete Selected']"))).click();
+		//new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Delete This Customer']"))).click();
+
+	}
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
 }

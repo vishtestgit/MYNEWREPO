@@ -6,7 +6,7 @@
       <class name="com.att.testcases.HomeTest">
         <methods>
           <include name="setUP"/>
-          <include name="verifyBillingTypeTest"/>
+          <include name="verifySelectSettingsLicensesMenu"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.att.testcases.HomeTest -->

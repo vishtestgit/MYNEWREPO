@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.att.base.BaseTest;
 
@@ -21,6 +23,15 @@ public class TasksPOM extends BaseTest{
 	@FindBy(xpath="//input[@id='deleteButton']")
 	WebElement AttDeleteConfirmationBtn;
 	
+	//Project and Customer page Name
+	@FindBy(xpath="//td[contains(text(),'Active Customers and Projects')]")
+	WebElement AttProjectAndCustomerPageName;
+	
+	@FindBy(xpath="//a[text()='Projects & Customers']")
+	WebElement AttProjectAndCustomerTab;
+	
+	
+	
 	//Initialization
 	public TasksPOM() {
 		PageFactory.initElements(driver, this);
@@ -30,6 +41,13 @@ public class TasksPOM extends BaseTest{
 		return AttTaskPageName.getText();
 
 	}
+	
+	public ProjectAndCustomerPOM validateProjectAndCustomerTabClick() {
+		AttProjectAndCustomerTab.click();
+		return new ProjectAndCustomerPOM();
+	}
+	
+
 	
 	public CreateNewTaskPOM validateCreateNewTasksBtnClick() {
 		AttcreateTasksBtn.click();

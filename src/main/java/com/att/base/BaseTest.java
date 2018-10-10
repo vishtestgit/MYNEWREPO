@@ -17,20 +17,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.att.util.TestUtil;
-import com.att.util.WebEventListener;
+
 
 
 public class BaseTest {
 	public static WebDriver driver;
 	public static Properties propv;
-	public  static EventFiringWebDriver e_driver;
-	public static WebEventListener eventListener;
+
 
 	
 	public BaseTest() {
@@ -57,15 +55,10 @@ public class BaseTest {
 	driver.manage().window().maximize();
 	driver.manage().timeouts().pageLoadTimeout(TestUtil.PageLoadTimeOut,TimeUnit.SECONDS);
 	driver.manage().timeouts().implicitlyWait(TestUtil.ImplicitTimeOut, TimeUnit.SECONDS);
-	//driver.manage().deleteAllCookies();
+	driver.manage().deleteAllCookies();
 	driver.get(propv.getProperty("url"));
 	
-	//EvenListener declaration under initialization methods.
-	e_driver = new EventFiringWebDriver(driver);
-	eventListener = new WebEventListener(); 
-	e_driver.register(eventListener);
-	driver = e_driver;
-	
+
 	}
 	
 	
@@ -136,6 +129,7 @@ public class BaseTest {
 		
 		Actions act = new Actions(driver);
 		act.moveToElement(tu_mainMenu).click().build().perform();
+		//act.click(tu_mainMenu).build().perform();
 		act.click(tu_subMenu).build().perform();
 		
 	}

@@ -9,8 +9,8 @@ import com.att.base.BaseTest;
 import com.att.pom.CreateNewTaskPOM;
 import com.att.pom.HomePOM;
 import com.att.pom.LoginPOM;
+import com.att.pom.ProjectAndCustomerPOM;
 import com.att.pom.ReportsPOM;
-import com.att.pom.TaskAndCustomerPOM;
 import com.att.pom.TasksPOM;
 import com.att.util.TestUtil;
 
@@ -25,7 +25,7 @@ public class CreateNewTasksTest extends BaseTest {
 	TasksPOM tasksPOM;
 	TestUtil testUtil;
 	CreateNewTaskPOM createNewTasksPOM;
-	TaskAndCustomerPOM taskAndCustomerPOM;
+	ProjectAndCustomerPOM projectAndCustomerPOM;
 	ReportsPOM reportsPOM;
 	
 	@BeforeMethod
@@ -34,7 +34,7 @@ public class CreateNewTasksTest extends BaseTest {
 		testUtil = new TestUtil();
 		loginPOM = new LoginPOM();
 		tasksPOM = new TasksPOM();
-		taskAndCustomerPOM = new TaskAndCustomerPOM();
+		projectAndCustomerPOM = new ProjectAndCustomerPOM();
 		createNewTasksPOM = new CreateNewTaskPOM();
 		homePOM = loginPOM.validateAttLogin(propv.getProperty("username"),propv.getProperty("password"));
 		homePOM.validateTaskClick();
@@ -56,7 +56,7 @@ public class CreateNewTasksTest extends BaseTest {
 	@Test
 	public void verifyCustomerAndTaskCreateAndDelete() {
 		createNewTasksPOM.validateCreateCustomerAndTask();
-		String x = taskAndCustomerPOM.validateSelectedAndDeleteCustomer();
+		String x = projectAndCustomerPOM.validateSelectedAndDeleteCustomer();
 		Assert.assertEquals(x, "Selected customers and projects have been successfully deleted.", "Delete Unsuccessful");
 	}
 	
@@ -65,13 +65,13 @@ public class CreateNewTasksTest extends BaseTest {
 	public void verify_Two_Records_Creation_Billable_Task_Using_New_Customer_And_New_Project() throws InterruptedException {
 		createNewTasksPOM.validate_Billable_Task_Using_New_Customer_And_New_Project("-- new customer --","Sanatan","Jaana","Jodichhedi","2:00","Billable");
 		Thread.sleep(200);
-		taskAndCustomerPOM.validateDeleteCustomer("Sanatan");
+		projectAndCustomerPOM.validateDeleteCustomer("Sanatan");
 
 		homePOM.validateTaskClickOnOpenTask();
 		tasksPOM.validateCreateNewTasksBtnClick();
 		createNewTasksPOM.validate_Billable_Task_Using_New_Customer_And_New_Project("-- new customer --","Vaishnavi","Jaani","Jodichhedi","2:00","Billable");
 		Thread.sleep(200);
-		taskAndCustomerPOM.validateDeleteCustomer("Vaishnavi");
+		projectAndCustomerPOM.validateDeleteCustomer("Vaishnavi");
 	
 	}
 
@@ -80,7 +80,7 @@ public class CreateNewTasksTest extends BaseTest {
 	public void verify_Billable_Task_Using_New_Customer_And_New_Project() throws InterruptedException {
 		createNewTasksPOM.validate_Billable_Task_Using_New_Customer_And_New_Project("-- new customer --","CustNameSanatan","PrjNameJaana","TaskNameJodichhedi","2:00","Billable");
 		Thread.sleep(400);
-		taskAndCustomerPOM.validateDeleteCustomer("CustNameSanatan");
+		projectAndCustomerPOM.validateDeleteCustomer("CustNameSanatan");
 
 	}
 	
@@ -105,7 +105,7 @@ public class CreateNewTasksTest extends BaseTest {
 	public void verify_Non_Billable_Task_Using_New_Customer_And_New_Project() throws InterruptedException {
 		createNewTasksPOM.validate_Billable_Task_Using_New_Customer_And_New_Project("-- new customer --","CustNameSanatan","PrjNameJaana","TaskNameJodichhedi","2:00","Non-Billable");
 		Thread.sleep(400);
-		taskAndCustomerPOM.validateDeleteCustomer("CustNameSanatan");
+		projectAndCustomerPOM.validateDeleteCustomer("CustNameSanatan");
 
 	}
 

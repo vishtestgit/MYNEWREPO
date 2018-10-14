@@ -40,10 +40,6 @@ public class HomeTest extends BaseTest{
 		Assert.assertEquals(x, "user1 user1", "User name not found");
 	}
 	
-	@Test
-	public void verifyTasksTab() {
-		homePOM.validateTasksTab();
-	}
 	
 	@Test
 	public void verifyReportTab() {
@@ -52,7 +48,7 @@ public class HomeTest extends BaseTest{
 	
 	@Test
 	public void verifyTaskTabClick() {
-		homePOM.validateTaskClick();
+		homePOM.validateTaskTab();
 	}
 	
 	//Setting Menu options Validation test cases:

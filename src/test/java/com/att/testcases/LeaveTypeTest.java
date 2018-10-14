@@ -17,7 +17,6 @@ public class LeaveTypeTest extends BaseTest{
 
 	LoginPOM loginPOM;
 	HomePOM homePOM;
-	TestUtil testUtil;
 	TasksPOM tasksPOM;
 	ReportsPOM reportsPOM;
 	LeaveTypePOM leaveTypePOM;
@@ -30,14 +29,13 @@ public class LeaveTypeTest extends BaseTest{
 	public void setUP() {
 		initialization();
 		loginPOM = new LoginPOM();
-		testUtil = new TestUtil();
 		leaveTypePOM = new LeaveTypePOM();
 		homePOM = loginPOM.validateAttLogin(propv.getProperty("username"),propv.getProperty("password"));
 		homePOM.validateSelectSettingsMenuByValue("Leave Types");
 	}
 	
 
-	@Test
+	@Test()
 	public void verifyLeaveTypePageName() {
 		String x = leaveTypePOM.validateLeaveTypePageName();
 		Assert.assertEquals(x, "Leave Types","Page Name Mismatch");

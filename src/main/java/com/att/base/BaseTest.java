@@ -3,23 +3,24 @@ package com.att.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.Properties;
+import java.util.Random;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.att.util.TestUtil;
 
@@ -30,7 +31,7 @@ public class BaseTest {
 	public static Properties propv;
 
 
-	
+	//Constructor: to initialize and load properties in prop.
 	public BaseTest() {
 		try {
 			propv = new Properties();
@@ -42,7 +43,9 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 		
-	}		
+	}	
+	
+	//Method: Initialization of given browser and setting prerequisites of the test browser.
 	public static void initialization() {
 	String browserName = propv.getProperty("browser");
 	if(browserName.equals("chrome")) {
@@ -51,6 +54,9 @@ public class BaseTest {
 	}else if(browserName.equals("FF")) {
 		System.setProperty("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe");
 		driver = new FirefoxDriver();
+	}else if(browserName.equals("IE")) {
+		System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer_x64_3.14.0\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();
 	}
 	driver.manage().window().maximize();
 	driver.manage().timeouts().pageLoadTimeout(TestUtil.PageLoadTimeOut,TimeUnit.SECONDS);
@@ -61,84 +67,23 @@ public class BaseTest {
 
 	}
 	
-	
-
-
-	
-	/*
-	 * custom clickOn method: click on element on the basis of some ExpectedConditions to avoid StaleElementReferenceException
-	 */
-	public static void clickOn(WebDriver driver, WebElement locator, int timeout){
-		new WebDriverWait(driver, timeout).ignoring(StaleElementReferenceException.class)
-		.until(ExpectedConditions.elementToBeClickable(locator));
-		locator.click();
-		//logger.info("element clicked:"+ locator);
-	}
-	
-	/*
-	 * custom sendKeyValue method: enter value in element on the basis of some ExpectedConditions to avoid StaleElementReferenceException
-	 */
-	public static void sendKeyValue(WebDriver driver, WebElement locator, int timeout, String value){
-		new WebDriverWait(driver, timeout).ignoring(StaleElementReferenceException.class)
-		.until(ExpectedConditions.elementToBeClickable(locator));
-		locator.sendKeys(value);
-		//logger.info("value entered in:"+ locator + ": value is:"+ value);
-
-	}
-	
-	/*
-	 * custom getWebElement method: get the WebElement on the basis of some ExpectedConditions to avoid StaleElementReferenceException
-	 */
-	public static WebElement getWebElement(WebDriver driver, WebElement locator, int timeout){
-		new WebDriverWait(driver, timeout).ignoring(StaleElementReferenceException.class)
-		.until(ExpectedConditions.elementToBeClickable(locator));
-		return locator;
-	}
-	
-	/*
-	 * custom getWebElements method: get similar WebElements on the basis of some ExpectedConditions to avoid StaleElementReferenceException
-	 */
-	public static List<WebElement> getWebElements(WebDriver driver, WebElement locator, int timeout){
-		new WebDriverWait(driver, timeout).ignoring(StaleElementReferenceException.class)
-		.until(ExpectedConditions.elementToBeClickable(locator));
-		return driver.findElements((By) locator);
-	}
-	
-	
-
-	
-	
-	public static <T extends Comparable<? super T>> boolean isSorted(List<T> list) {
-	    if (list.size() != 0) {
-	        ListIterator<T> it = list.listIterator();
-	        for (T item = it.next(); it.hasNext(); item = it.next()) {
-	            if (it.hasPrevious() && it.previous().compareTo(it.next()) > 0) {
-	                return false;
-	            }
-	        }
-
-	    }
-	    return true;
-	}
-	
-	
-
+	//Method: to click on main menu and sub menu by using mouse actions
 	public void clickOnSubMenu(WebDriver driver, String mainMenuXpath, String subMenuXpath) {
 		WebElement tu_mainMenu = driver.findElement(By.xpath(mainMenuXpath));
 		WebElement tu_subMenu = driver.findElement(By.xpath(subMenuXpath));
 		
 		Actions act = new Actions(driver);
 		act.moveToElement(tu_mainMenu).click().build().perform();
-		//act.click(tu_mainMenu).build().perform();
 		act.click(tu_subMenu).build().perform();
-		
 	}
 	
+	//Method: select list item as per given list item text
 	public void selectSingleDropDownItem(WebDriver driver, WebElement attSelectCustListBox, String custListOption) {
 		Select dropDownElement = new Select(attSelectCustListBox);
 		dropDownElement.selectByVisibleText(custListOption);
 	}
 	
+	//Method: to get today's date in MMM dd, yyyy format.
 	public String getTodaysDate() {
 		  Date myDate = new Date();
 	      System.out.println(myDate);
@@ -146,6 +91,112 @@ public class BaseTest {
 	      String strDate = sm.format(myDate);
 	      return strDate;
 	}
+	
+	//Method: to generate Random string with 6 chars.
+	protected String getSaltString() {
+	        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	        StringBuilder salt = new StringBuilder();
+	        Random rnd = new Random();
+	        while (salt.length() < 6) { // length of the random string.
+	            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+	            salt.append(SALTCHARS.charAt(index));
+	        }
+	        String saltStr = salt.toString();
+	        return saltStr;
+
+	    }
+	
+	//Method: Click on WebElement in the list of WebElements.
+	public static void selectElementByListByTextOfAnElement(List<WebElement> AttAllReportTabNameList, String tabName) {
+		int listSize = AttAllReportTabNameList.size();
+		for(int i=0;i<listSize;i++)
+		{
+			if(AttAllReportTabNameList.get(i).getText().contains(tabName)) {
+				AttAllReportTabNameList.get(i).click();
+			}
+		}
+	}
+	
+	//Method: to switchTo - Child Window, getText of given WebElement and close.
+	public String getTextAndCloseChildWindow(WebElement webElement) {
+		String x = null;
+		String mainWindow = driver.getWindowHandle();
+		Set<String> allWindows = driver.getWindowHandles();
+	
+		for(String childWindow: allWindows) {
+			if(!childWindow.equals(mainWindow)) {
+				driver.switchTo().window(childWindow);
+				x = webElement.getText();
+				driver.close();
+				driver.switchTo().window(mainWindow);
+				return x;
+		}
+	}
+	return x;
+
+	}
+	
+	//Method: to switchTo - Child Window and close.
+	public void closeChildWindow() {
+		String mainWindow = driver.getWindowHandle();
+		Set<String> allWindows = driver.getWindowHandles();
+	
+		for(String childWindow: allWindows) {
+			if(!childWindow.equals(mainWindow)) {
+				driver.switchTo().window(childWindow);
+				driver.close();
+				driver.switchTo().window(mainWindow);
+			}
+		}
+
+	}
+	
+	//Method: to switchTo - Child Window get Window title and close.
+	public String getTitleAndCloseChildWindow() {
+		String x = null;
+		String mainWindow = driver.getWindowHandle();
+		Set<String> allWindows = driver.getWindowHandles();
+	
+		for(String childWindow: allWindows) {
+			if(!childWindow.equals(mainWindow)) {
+				driver.switchTo().window(childWindow);
+				x = driver.getTitle();
+				driver.close();
+				driver.switchTo().window(mainWindow);
+				return x;
+			}
+		}
+		return x;
+	}
+	
+	
+	//Method: to switchTo - Child Window.
+	public void switchToChildWindow() {
+		String mainWindow = driver.getWindowHandle();
+		Set<String> allWindows = driver.getWindowHandles();
+	
+		for(String childWindow: allWindows) {
+			if(!childWindow.equals(mainWindow)) {
+				driver.switchTo().window(childWindow);
+			}
+		}
+
+	}
+	
+	//Method: to switchTo - Main Window. [use after using switch to switchToChildWindow()]
+	public void switchToMainWindow() {
+		String childWindow = driver.getWindowHandle();
+		Set<String> allWindows = driver.getWindowHandles();
+	
+		for(String mainWindow: allWindows) {
+			if(!mainWindow.equals(childWindow)) {
+				driver.switchTo().window(mainWindow);
+			}
+		}
+
+	}
+
+
 	
 	
 }

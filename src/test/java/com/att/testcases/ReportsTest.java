@@ -35,11 +35,12 @@ public class ReportsTest extends BaseTest{
 		projectAndCustomerPOM = new ProjectAndCustomerPOM();
 		createNewTasksPOM = new CreateNewTaskPOM();
 		homePOM = loginPOM.validateAttLogin(propv.getProperty("username"),propv.getProperty("password"));
+		homePOM.validateReportsTab();
 	}
 	
 	@Test
-	public void verifyReportsTabLinkClick() {
-		reportsPOM.validateClickOnReportsTabLink();
+	public void verifyClickOnCreateReportBtn() {
+		reportsPOM.validateClickOnCreateReportBtn();
 	}
 	
 	@AfterMethod

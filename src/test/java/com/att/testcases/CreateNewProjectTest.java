@@ -33,7 +33,7 @@ public class CreateNewProjectTest extends BaseTest{
 		projectAndCustomerPOM = new ProjectAndCustomerPOM();
 		createNewProjectPOM = new CreateNewProjectPOM();
 		homePOM = loginPOM.validateAttLogin(propv.getProperty("username"),propv.getProperty("password"));
-		homePOM.validateTaskClick();
+		homePOM.validateTaskTab();
 		tasksPOM.validateProjectAndCustomerTabClick();
 		projectAndCustomerPOM.validateCreateProjectBtnClick();
 	}

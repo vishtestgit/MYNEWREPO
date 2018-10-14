@@ -8,16 +8,17 @@ import com.att.base.BaseTest;
 
 public class ReportsPOM extends BaseTest{
 
-	@FindBy(xpath="//a[@class='content reports']")
-	WebElement AttReportsTabLink;
+	@FindBy(xpath="//span[text()='Create Report']")
+	WebElement AttCreateReportsBtn;
 	
 	
 	public ReportsPOM() {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void validateClickOnReportsTabLink() {
-		AttReportsTabLink.click();
+	public ChooseReportToCreatePOM validateClickOnCreateReportBtn() {
+		AttCreateReportsBtn.click();
+		return new ChooseReportToCreatePOM();
 	}
 	
 	

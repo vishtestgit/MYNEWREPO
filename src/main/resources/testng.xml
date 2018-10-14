@@ -21,6 +21,9 @@
 		<class name = "com.att.testcases.CreateNewCustomerTest"> </class>
 		<class name = "com.att.testcases.CreateNewProjectTest"> </class>
 		<class name = "com.att.testcases.ProjectAndCustomerTest"> </class>
+		<class name = "com.att.testcases.BillingSummaryReportExampleTest"> </class>
+		<class name = "com.att.testcases.ChooseReportToCreateTest"> </class>
+
  
  	</classes>
 </test>

@@ -32,7 +32,7 @@ public class TasksTest extends BaseTest{
 		loginPOM = new LoginPOM();
 		tasksPOM = new TasksPOM();
 		homePOM = loginPOM.validateAttLogin(propv.getProperty("username"),propv.getProperty("password"));
-		homePOM.validateTaskClick();
+		homePOM.validateTaskTab();
 		Thread.sleep(2000);
 	}
 	

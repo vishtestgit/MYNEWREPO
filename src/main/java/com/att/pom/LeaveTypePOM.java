@@ -16,6 +16,7 @@ public class LeaveTypePOM extends BaseTest{
 		PageFactory.initElements(driver, this);
 	}
 	
+	//Actions
 	public String validateLeaveTypePageName() {
 		String x = AttLeaveTypePageName.getText();
 		return x;

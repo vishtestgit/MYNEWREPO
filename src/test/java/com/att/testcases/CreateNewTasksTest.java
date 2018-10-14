@@ -37,7 +37,7 @@ public class CreateNewTasksTest extends BaseTest {
 		projectAndCustomerPOM = new ProjectAndCustomerPOM();
 		createNewTasksPOM = new CreateNewTaskPOM();
 		homePOM = loginPOM.validateAttLogin(propv.getProperty("username"),propv.getProperty("password"));
-		homePOM.validateTaskClick();
+		homePOM.validateTaskTab();
 		tasksPOM.validateCreateNewTasksBtnClick();
 		Thread.sleep(2000);
 	}
@@ -87,17 +87,19 @@ public class CreateNewTasksTest extends BaseTest {
 	//TEST CASE: II. Create Non-billable task using Existing Customer and Project.
 	@Test
 	public void verify_Create_Non_billable_task_using_Existing_Customer() throws InterruptedException {
-		createNewTasksPOM.validate_Billable_Task_Using_Existing_Customer_And_Existing_Project("Vishnu","ROCKON","TaskJodichhedi","2:00","Non-Billable");
+		String taskName = "Task "+getSaltString();
+		createNewTasksPOM.validate_Billable_Task_Using_Existing_Customer_And_Existing_Project("Vishnu","ROCKON",taskName,"2:00","Non-Billable");
 		Thread.sleep(200);
-		tasksPOM.validateDeleteSelectedTask("TaskJodichhedi");
+		tasksPOM.validateDeleteSelectedTask(taskName);
 	}
 	
 	//TEST CASE: III. Create billable task in Existing Customer and Project.
 	@Test
 	public void verify_Create_Billable_task_using_Existing_Customer() throws InterruptedException {
-		createNewTasksPOM.validate_Billable_Task_Using_Existing_Customer_And_Existing_Project("Vishnu","ROCKON","TaskJodichhedi","2:00","Billable");
+		String taskName = "Task "+getSaltString();
+		createNewTasksPOM.validate_Billable_Task_Using_Existing_Customer_And_Existing_Project("Vishnu","ROCKON",taskName,"2:00","Billable");
 		Thread.sleep(200);
-		tasksPOM.validateDeleteSelectedTask("TaskJodichhedi");
+		//tasksPOM.validateDeleteSelectedTask(taskName);
 	}
 	
 	//TEST CASE: IV. Create non-billable task with New customer and Project

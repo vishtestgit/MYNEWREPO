@@ -25,7 +25,8 @@ public class HomePOM extends BaseTest{
 	@FindBy(xpath="//a[text()='Open Tasks']")
 	WebElement AttTasksTabOpenTask;
 	
-	
+	@FindBy(xpath="//div[text()='Reports']")
+	WebElement AttReportTab;
 	
 	@FindBy(xpath="//a[@class='content reports']")
 	WebElement AttReportsTab;
@@ -54,14 +55,12 @@ public class HomePOM extends BaseTest{
 		return AttProfileName.getText();
 	}
 	
-	public TasksPOM validateTasksTab() {
-		return new TasksPOM();
-	}
 	public ReportsPOM validateReportsTab() {
+		AttReportTab.click();
 		return new ReportsPOM();
 	}
 	
-	public TasksPOM validateTaskClick() {
+	public TasksPOM validateTaskTab() {
 		AttTasksTab.click();
 		return new TasksPOM();
 	}

@@ -31,7 +31,7 @@ public class ProjectAndCustomerTest extends BaseTest{
 		tasksPOM = new TasksPOM();
 		projectAndCustomerPOM = new ProjectAndCustomerPOM();
 		homePOM = loginPOM.validateAttLogin(propv.getProperty("username"),propv.getProperty("password"));
-		homePOM.validateTaskClick();
+		homePOM.validateTaskTab();
 		tasksPOM.validateProjectAndCustomerTabClick();
 	}
 	

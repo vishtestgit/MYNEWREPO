@@ -7,7 +7,7 @@
 		class-name = "com.att.ExtentReportListener.ExtentReporterNG" /> 
 </listeners>
 
-
+//Test
 <test name = "ActiTime">
 	<classes>
 		<class name = "com.att.testcases.HomeTest"> </class>
